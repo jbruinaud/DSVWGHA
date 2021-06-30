@@ -41,6 +41,6 @@ jobs:
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}  # To be stored in GitHub Secrets.
         incremental: true
         break_build: false
-        scanners: sast
+        scanners: sast,sca
         bug_tracker: GITHUBPULL
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }}
